@@ -14,9 +14,10 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2){
     sum->next = NULL;
     int carry = 0;
     
-    int val1,val2;
     while((l1 != NULL) || (l2 != NULL) || carry)
     {
+		int val1,val2;
+		
         sum->next = (struct ListNode *)malloc(sizeof(struct ListNode));
         sum = sum->next;    
         val1 = val2 = 0;
