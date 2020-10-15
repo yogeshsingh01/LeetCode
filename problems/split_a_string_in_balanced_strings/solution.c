@@ -3,10 +3,10 @@
 int balancedStringSplit(char * s){
     
     int numCur=0, numPre=0, noOfPattern=0, pathEnd=1;
-    char cur=0, pre=*s;
+    char pre=*s;
     while(*s != '\0')
     {
-        cur = *s++;
+        char cur = *s++;
         
         if(cur!=pre)
         {

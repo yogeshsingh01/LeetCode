@@ -5,7 +5,7 @@ bool canConstruct(char * ransomNote, char * magazine){
     int len = strlen(ransomNote);
 
     int count = 0;
-    char * maga = magazine;
+    char * maga = NULL;
     while(*ransomNote != '\0')
     {
         maga = magazine;

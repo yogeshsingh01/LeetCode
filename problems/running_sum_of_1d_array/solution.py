@@ -1,7 +1,7 @@
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
-        sum = 0
+        lstSum = 0
         for i,_ in enumerate(nums):
-            sum += nums[i]
-            nums[i] = sum
+            lstSum += nums[i]
+            nums[i] = lstSum
         return nums
