@@ -13,13 +13,18 @@ int* decompressRLElist(int* nums, int numsSize, int* returnSize){
         int freq = nums[i];
         int val = nums[i+1];
         
-        list = realloc(list, (size + freq)*sizeof(int));
+        void *tmp = realloc(list, (size + freq)*sizeof(int));
 
-        if(NULL == list)
+        if (NULL == tmp)
         {
             free(list);
             return NULL;
         }
+        else
+        {
+            list = tmp;
+        }
+
         for (int j = size; j< (size + freq); j++)
         {
             list[j] = val;
