@@ -1,5 +1,5 @@
-class Solution(object):
-    def twoSum(self, nums, target):
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
         if len(nums) <= 1:
             return False
         buff_dict = {}
@@ -8,3 +8,4 @@ class Solution(object):
                 return [buff_dict[nums[i]], i]
             else:
                 buff_dict[target - nums[i]] = i
+        
